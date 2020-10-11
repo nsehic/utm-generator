@@ -35,18 +35,20 @@ export default function UTMForm() {
     ];
 
     useEffect(() => {
+        const d = new Date();
+        const datePrefix = `${d.getFullYear()}${d.getDate()}${d.getMonth() + 1}`;
         switch(typeSelect) {
             case 'blog':
-                setOutputText(`${baseUrl}/blog/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${campaignText}&barcode=%%customer_barcode%%`);
+                setOutputText(`${baseUrl}/blog/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${datePrefix}_${campaignText}&barcode=%%customer_barcode%%`);
                 break;
             case 'standard':
-                setOutputText(`${baseUrl}/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${campaignText}&barcode=%%customer_barcode%%`);
+                setOutputText(`${baseUrl}/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${datePrefix}_${campaignText}&barcode=%%customer_barcode%%`);
                 break;
             case 'product':
-                setOutputText(`${baseUrl}/p/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${campaignText}&barcode=%%customer_barcode%%`);
+                setOutputText(`${baseUrl}/p/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${datePrefix}_${campaignText}&barcode=%%customer_barcode%%`);
                 break;
             case 'collection':
-                setOutputText(`${baseUrl}/c/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${campaignText}&barcode=%%customer_barcode%%`);
+                setOutputText(`${baseUrl}/c/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${datePrefix}_${campaignText}&barcode=%%customer_barcode%%`);
                 break;
             case 'external':
                 setOutputText(handleText);
