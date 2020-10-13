@@ -27,10 +27,6 @@ export default function UTMForm() {
         {
             handle: 'collection',
             name: 'Collection'
-        },
-        {
-            handle: 'external',
-            name: 'External'
         }
     ];
 
@@ -47,9 +43,6 @@ export default function UTMForm() {
                 break;
             case 'collection':
                 setOutputText(`${baseUrl}/c/${handleText}?utm_source=${sourceText}&utm_medium=${mediumText}&utm_content=${contentText}&utm_campaign=${campaignText}&barcode=%%customer_barcode%%`);
-                break;
-            case 'external':
-                setOutputText(handleText);
                 break;
         }
     });
