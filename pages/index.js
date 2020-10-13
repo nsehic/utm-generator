@@ -7,6 +7,7 @@ export default function App() {
     <div className='wrapper'>
       <Head>
         <title>UTM Generator | The Reject Shop</title>
+	<meta name="description" content="UTM generator for The Reject Shop" />
         <link rel="icon" size="16x16" href="https://assets.rejectshop.com.au/careers/assets/icon-16x16.png" />
         <link rel="icon" size="32x32" href="https://assets.rejectshop.com.au/careers/assets/icon-32x32.png" />
         <link rel="icon" size="64x64" href="https://assets.rejectshop.com.au/careers/assets/icon-64x64.png" />
