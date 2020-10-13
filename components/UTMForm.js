@@ -54,7 +54,7 @@ export default function UTMForm() {
             <input type='text' placeholder='Handle' value={handleText} onChange={(e) => setHandleText(e.target.value)}/>
             <select onChange={(e) => setTypeSelect(e.target.value)} value={typeSelect}>
                 {types.map(type => (
-                    <option value={type.handle}>{type.name}</option>
+                    <option key={type.handle} value={type.handle}>{type.name}</option>
                 ))}
             </select>
             <input type='text' placeholder='Source' value={sourceText} onChange={(e) => setSourceText(e.target.value)}/>
