@@ -77,13 +77,11 @@ a {
   margin-top: 15px;
   font-size: 12px;
   padding: 12px 15px;
+  height: 200px;
   border-radius: 2px;
   min-height: 20px;
   overflow-x: scroll;
-  border: 2px solid #f0f0f0;
-  transition: border .15s ease;
-}
-
-.UTMForm .output-text:active {
-  border: 2px solid #222;
+  font-family: inherit;
+  resize: vertical;
+  outline-color: #222;
 }

@@ -62,7 +62,7 @@ export default function UTMForm() {
             <input type='text' placeholder='Content' value={contentText} onChange={(e) => setContentText(e.target.value)}/>
             <input type='text' placeholder='Campaign' value={campaignText} onChange={(e) => setCampaignText(e.target.value)}/>
             
-            <p className='output-text' onClick={() => copy(outputText)}>{outputText}</p>
+            <textarea className='output-text' onClick={() => copy(outputText)} value={outputText}></textarea>
 
         </form>
     );
