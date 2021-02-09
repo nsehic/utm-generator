@@ -1,0 +1,85 @@
+.SelectField select {
+    border: 1px solid #E6E6E6;
+    padding: 15px 20px;
+    border-radius: 2px;
+    transition: border .2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+  }
+  
+  .SelectField {
+    position: relative;
+  }
+  
+  .SelectField::after {
+    content: "\25bc";
+    font-size: 10px;
+    right: 15px;
+    position: relative;
+    color: #222;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+  }
+  
+  .InputField input {
+    border: 1px solid #E6E6E6;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 2px;
+    transition: border .2s;
+  }
+  
+  .InputField input:focus, .SelectField select:focus{
+    border-color: #222;
+    box-shadow: 0 0 1px 3px rgba(97, 97, 97, .10);
+    outline: none;
+  }
+  
+  
+  
+  .InputField input:focus ~ label,
+  .InputField input:not(:focus):valid ~ label{
+    transform: translateY(-23px);
+    font-size: 12px;
+    color: #616161;
+  }
+  
+  .InputField{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   position: relative;
+   margin: 20px 0;
+  }
+
+  .SelectField label, .InputField label {
+      position: absolute;
+      left: 20px;
+      pointer-events: none;
+      background-color: #fff;
+      line-height: 1;
+      padding: 0 5px;
+  }
+  
+  .SelectField label {
+    color: #616161;
+    font-size: 12px;
+    top: -5px;
+  }
+  
+  .InputField label {
+    font-size: 14px;
+    color: #929292;
+    transition: all .2s ease;
+  }
+  
+  
+  
+  
+  
+  
+  
+  

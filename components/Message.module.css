@@ -1,0 +1,22 @@
+.Message {
+    font-size: 12px;
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #222;
+    width: 100%;
+    top: 40px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    animation: fade 5.5s ease;
+    margin-bottom: 5px;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
