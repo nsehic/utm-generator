@@ -8,7 +8,7 @@ div.container {
   }
   
   div.utm-form {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,24 +21,24 @@ div.container {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 60%;
+    width: 50%;
   }
   
   div.utm-form h1 {
-    width: 400px;
+    width: 500px;
     display: block;
     font-family: futura-pt,sans-serif;
   }
   
   div.utm-form p {
-    width: 400px;
+    width: 500px;
     margin-bottom: 50px;
     margin-top: 15px;
     font-size: 14px;
   }
 
   .form-group {
-    width: 400px;
+    width: 500px;
   }
 
   .message-list {

@@ -16,6 +16,8 @@ const formatDate = (dt) => {
     return `${year}${month}${date}`;
 }
 
+const isEmpty = string => string.length === 0;
+
 export default function Form() {
     const [handleText, setHandleText] = useState('');
     const [sourceText, setSourceText] = useState('newsletter');
@@ -24,7 +26,8 @@ export default function Form() {
     const [campaignText, setCampaignText] = useState('');
     const [typeSelect, setTypeSelect] = useState('collection');
     const [isEmail, setIsEmail] = useState(false);
-    const [messages, setMessages] = useState([]);    
+    const [messages, setMessages] = useState([]);
+    const [submitDisabled, setSubmitDisabled] = useState(true);    
 
     useEffect(() => {
         if(mediumText === 'email' && sourceText === 'newsletter') {
@@ -35,6 +38,14 @@ export default function Form() {
             setIsEmail(false);
         }
     }, [mediumText, sourceText]);
+
+    useEffect(() => {
+        if(isEmpty(handleText) || isEmpty(sourceText) || isEmpty(mediumText) || isEmpty(contentText) || isEmpty(campaignText)) {
+            setSubmitDisabled(true);
+        } else {
+            setSubmitDisabled(false);            
+        }
+    }, [handleText, sourceText, mediumText, contentText, campaignText]);
 
 
 
@@ -140,7 +151,7 @@ export default function Form() {
                 />
             ))}
 
-            <SubmitButton value="Generate & Copy Link" />
+            <SubmitButton value="Generate & Copy Link" disabled={submitDisabled}/>
 
             <div className='message-list'>
                 { messages.map(message => (

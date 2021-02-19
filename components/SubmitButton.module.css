@@ -11,3 +11,8 @@
     cursor: pointer;
     text-align: center;
   }
+
+  .SubmitButton:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
