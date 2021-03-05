@@ -75,6 +75,16 @@ export default function Form() {
                     handle: 'collection',
                     name: 'Collection',
                     path: '/c/'
+                },
+                {
+                    handle: 'event-landing',
+                    name: 'Event Landing Page',
+                    path: '/e/l/'
+                },
+                {
+                    handle: 'category-landing',
+                    name: 'Category Landing Page',
+                    path: '/c/l/'
                 }
             ],
             update: e => setTypeSelect(e.target.value)
@@ -152,6 +162,7 @@ export default function Form() {
             ))}
 
             <SubmitButton value="Generate & Copy Link" disabled={submitDisabled}/>
+            
 
             <div className='message-list'>
                 { messages.map(message => (
